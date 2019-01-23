@@ -9,9 +9,9 @@
             <property name="javax.persistence.jdbc.driver"
                       value="com.mysql.cj.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost:3306/users-api-module" />
+                      value="jdbc:mysql://0.0.0.0:3306/users-api-module" />
             <property name="javax.persistence.jdbc.user"
-                      value="users-api-module" />
+                      value="redwall" />
             <property name="javax.persistence.jdbc.password"
                       value="1234" />
             <property name="hibernate.dialect" 

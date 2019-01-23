@@ -1,4 +1,4 @@
-package br.com.andrewribeiro.test;
+package solutions.redwall.users.api.module;
 
 import br.com.andrewribeiro.ribrest.Ribrest;
 import br.com.andrewribeiro.ribrest.core.exceptions.RibrestDefaultException;
@@ -148,7 +148,7 @@ public class RibrestTest {
 
     @BeforeClass
     public static void before() {
-        Ribrest.getInstance().debug(true).appBaseUrl(BASE_URL).appName(APP_NAME).persistenceUnit(APP_NAME).init();
+        Ribrest.getInstance().debug(true).appBaseUrl(BASE_URL).appName(APP_NAME).persistenceUnitName("users-api-module").init();
     }
 
 //    @AfterClass
