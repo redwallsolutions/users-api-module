@@ -5,6 +5,7 @@ import br.com.andrewribeiro.ribrest.core.annotations.RibrestModel;
 import br.com.andrewribeiro.ribrest.core.model.AbstractModel;
 import br.com.andrewribeiro.ribrest.services.command.GetPersistentModelCommand;
 import br.com.andrewribeiro.ribrest.services.command.MergeModelToPersistedModelCommand;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import solutions.redwall.users.api.module.commands.ValidateNewUserCommand;
 
@@ -22,6 +23,7 @@ import solutions.redwall.users.api.module.commands.ValidateNewUserCommand;
 public class User extends AbstractModel {
 
     private String fullName;
+    @Column(unique = true)
     private String email;
     private String username;
     private String password;
