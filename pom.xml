@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>solutions.redwall</groupId>
     <artifactId>users-api-module</artifactId>
-    <version>1.2.0T</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
