@@ -6,6 +6,7 @@ import br.com.andrewribeiro.ribrest.core.model.AbstractModel;
 import br.com.andrewribeiro.ribrest.services.command.GetPersistentModelCommand;
 import br.com.andrewribeiro.ribrest.services.command.MergeModelToPersistedModelCommand;
 import javax.persistence.Entity;
+import solutions.redwall.users.api.module.commands.EncryptPassCommand;
 import solutions.redwall.users.api.module.commands.ValidateNewUserCommand;
 
 /**
@@ -13,7 +14,7 @@ import solutions.redwall.users.api.module.commands.ValidateNewUserCommand;
  * @author Andrew Ribeiro
  */
 @RibrestModel(defaultEndpointsConfigurators = {
-    @RibrestEndpointConfigurator(method = "POST", beforeCommands = ValidateNewUserCommand.class),
+    @RibrestEndpointConfigurator(method = "POST", beforeCommands = {ValidateNewUserCommand.class, EncryptPassCommand.class}),
     @RibrestEndpointConfigurator(),
     @RibrestEndpointConfigurator(method = "PUT", path = "{id}", beforeCommands = {GetPersistentModelCommand.class, MergeModelToPersistedModelCommand.class}),
     @RibrestEndpointConfigurator(method = "DELETE", path = "{id}", beforeCommands = {GetPersistentModelCommand.class, MergeModelToPersistedModelCommand.class})

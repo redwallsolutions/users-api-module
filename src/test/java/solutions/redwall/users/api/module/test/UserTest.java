@@ -3,7 +3,6 @@ package solutions.redwall.users.api.module.test;
 import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MultivaluedHashMap;
 import javax.ws.rs.core.MultivaluedMap;
-import org.junit.Ignore;
 import org.junit.Test;
 import solutions.redwall.users.api.module.RibrestTest;
 import solutions.redwall.users.api.module.models.User;
